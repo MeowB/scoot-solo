@@ -1,0 +1,49 @@
+
+.hero {
+	position: relative;
+	background-color: $c-dark-navy;
+	margin: auto;
+	overflow: hidden;
+
+	.heading-circles {
+		position: absolute;
+		right: 0;
+		z-index: 1;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.background {
+		position: absolute;
+		display: grid;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		.heading-background {
+			margin: 0 auto;
+			opacity: .3;
+			z-index: 0;
+		}
+	
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+
+		h1 {
+			color: white;
+			padding: 72px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.heading-circles{
+		display: none;
+	}
+
+	h1 {
+		text-align: center;
+	}
+}

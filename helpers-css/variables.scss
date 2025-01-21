@@ -1,0 +1,58 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// COLORS
+$c-yellow: #FCB72B;
+$c-dark-navy: #495567;
+$c-dim-grey: #939CAA;
+$c-light-grey: #E5ECF4;
+$c-snow: #F2F5F9;
+$c-light-yellow: #FFF4DF;
+
+// TYPO
+
+// headings (h1, h2, h3, h4):
+@mixin heading1 {
+	font-family: 'space mono';
+	font-size: 56px;
+	line-height: 56px;
+	letter-spacing: -2.5px;
+	font-weight: 700;
+	color: $c-dark-navy;
+}
+
+@mixin heading2 {
+	font-family: 'space mono';
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -2.14px;
+	font-weight: 700;
+	color: $c-dark-navy;
+}
+
+@mixin heading3 {
+	font-family: 'space mono';
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -1.79px;
+	font-weight: 700;
+	color: $c-dark-navy;
+}
+
+@mixin heading4 {
+	font-family: 'space mono';
+	font-size: 28px;
+	line-height: 28px;
+	letter-spacing: -1.07px;
+	font-weight: 700;
+	color: $c-dark-navy;
+}
+
+// default text:
+
+@mixin text {
+	font-family: 'lexend deca';
+	font-size: 15px;
+	line-height: 25px;
+	color: $c-dark-navy;
+}

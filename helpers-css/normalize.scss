@@ -1,0 +1,78 @@
+@import './variables';
+@import './reset';
+
+body {
+	font-family: 'lexend deca';
+	min-width: 350px;
+}
+
+a {
+	color: $c-dark-navy;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1110px;
+	min-width: 310px;
+}
+
+.round {
+	border-radius: 50%
+}
+
+.yellow-circle {
+	@include heading4;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	color: $c-dark-navy;
+	background-color: $c-yellow;
+}
+
+.button{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 180px;
+	background-color: $c-yellow;
+	font-size: 15px;
+	font-weight: 700;
+	font-family: 'space mono';
+	color: white;
+	border: 3px solid $c-yellow;
+}
+
+.button:hover {
+	background-color: transparent;
+	color: $c-yellow;
+}
+
+h1 {
+	@include heading1;
+}
+
+h2 {
+	@include heading2;
+}
+
+h3 {
+	@include heading3;
+}
+
+h4 {
+	@include heading4;
+}
+
+p {
+	@include text;
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		padding: 0 32px;
+	}
+}

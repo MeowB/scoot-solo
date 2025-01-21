@@ -1,0 +1,92 @@
+@import '../helpers-css/normalize.css';
+@import '../components/footer.scss';
+@import '../components/small-heading.scss';
+
+.reverse {
+	transform: rotateZ(180deg);
+	transform: rotateY(180deg);
+
+	article img, p, h2 {
+		transform: rotatey(180deg);
+	}
+}
+
+.row {
+	position: relative;
+
+	.aside-circle {
+		position: absolute;
+		right: 0;
+		z-index: -1;
+	}
+
+	article {
+		display: flex;
+		flex-direction: row-reverse;
+		margin-top: 120px;
+
+		img {
+			width: 445px;
+			height: 445px;
+			border-radius: 50%;
+		}
+
+		.text-content {
+			margin: 125px 0;
+			padding-right: 220px;
+
+			p {
+				margin-top: 25px;
+				color: $c-dim-grey;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1110px) {
+	.row {
+		article {
+			flex-direction: column;
+			align-items: center;
+
+
+			.text-content {
+				margin-top: 50px;
+				padding: 0 100px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 550px) {
+	.row {
+
+		.aside-circle{
+			display: none;
+		}
+
+		article {
+
+			img {
+				width: 311px;
+				height: 311px;
+			}
+
+			.text-content {
+				margin: 0;
+				padding: 0;
+
+				margin-top: 56px;
+
+				p {
+					margin-top: 32px;
+				}
+			}
+		}
+
+	}
+}
+
