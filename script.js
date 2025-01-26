@@ -16,7 +16,7 @@ hamburger.addEventListener('click', () => {
 cross.addEventListener('click', () => {
 	cross.style.display = 'none'
 	hamburger.style.display = 'inline'
-	body.style.overflow = 'scroll'
+	body.style.overflow = 'auto'
 	body.style.height = 'auto'
 	header.classList.remove('slide-menu')
 })
