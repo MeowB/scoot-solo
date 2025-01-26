@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "lexend deca";
   min-width: 350px;
@@ -115,7 +119,7 @@ p {
   color: #495567;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1150px) {
   .container {
     padding: 0 32px;
   }

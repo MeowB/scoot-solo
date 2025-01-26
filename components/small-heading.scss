@@ -1,7 +1,7 @@
 
 .hero {
 	position: relative;
-	background-color: $c-dark-navy;
+	background-color: #2F3B59;
 	margin: auto;
 	overflow: hidden;
 
@@ -17,11 +17,14 @@
 		position: absolute;
 		display: grid;
 		align-items: center;
-		width: 100%;
+		width: 100vw;
 		height: 100%;
 		.heading-background {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
 			margin: 0 auto;
-			opacity: .3;
+			opacity: .2;
 			z-index: 0;
 		}
 	

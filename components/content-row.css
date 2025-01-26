@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.reverse {
+  transform: rotateZ(180deg);
+  transform: rotateY(180deg);
+}
+.reverse article img,
+.reverse p,
+.reverse h2,
+.reverse a {
+  transform: rotatey(180deg);
+}
+.reverse a {
+  justify-self: end;
+}
+
+.with-button .text-content a {
+  display: grid;
+  margin: 32px auto 0 auto;
+}
+
+.row {
+  position: relative;
+}
+.row a {
+  display: none;
+  margin-top: 40px;
+}
+.row article {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 120px;
+  position: relative;
+}
+.row article .image {
+  height: 100%;
+}
+.row article .image .aside-circle {
+  position: absolute;
+  right: -514px;
+  z-index: -1;
+}
+.row article .image img {
+  width: 445px;
+  height: 445px;
+  border-radius: 50%;
+}
+.row article .text-content {
+  margin: 125px 0;
+  padding-right: 220px;
+  display: grid;
+}
+.row article .text-content p {
+  margin-top: 25px;
+  color: #939CAA;
+}
+
+@media screen and (max-width: 1110px) {
+  .row article {
+    flex-direction: column;
+    align-items: center;
+  }
+  .row article .text-content {
+    margin-top: 50px;
+    padding: 0 100px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .row .aside-circle {
+    display: none;
+  }
+  .row article .image img {
+    width: 311px;
+    height: 311px;
+  }
+  .row article .text-content {
+    margin: 0;
+    padding: 0;
+    margin-top: 56px;
+  }
+  .row article .text-content p {
+    margin-top: 32px;
+  }
+}/*# sourceMappingURL=content-row.css.map */

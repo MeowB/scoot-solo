@@ -1,3 +1,90 @@
 @import '../helpers-css/normalize.css';
 @import '../components/footer.scss';
-@import '../components/small-heading.scss'
+@import '../components/small-heading.scss';
+@import '../components/header.scss';
+@import '../components/value-list.scss';
+@import '../components/content-row.scss';
+
+
+.row article .image {
+	position: relative;
+
+	svg {
+		position: absolute;
+		bottom: -10px;
+		left: -120px;
+	}
+
+	hr {
+		position: absolute;
+		height: 14px;
+		background-color: $c-yellow;
+		border: none;
+		width: 5000px;
+		box-shadow: 0 0 1px $c-yellow;
+		bottom: 134px;
+		right: -5050px;
+		transform: rotatez(180deg);
+	}
+}
+
+
+@media screen and (max-width: 680px) {
+
+	.row article .image {
+
+		.svg {
+			svg {
+				top: 120px;
+				left: -20px;
+				height: 100%;
+				width: 250%;
+			}
+		}
+
+		hr {
+			display: none;
+		}
+	}
+}
+
+.career-list {
+	ul {
+		display: grid;
+		gap: 24px;
+		margin-top: 120px;
+
+		li {
+			display: flex;
+			justify-content: space-between;
+			padding: 34px 24px;
+			background-color: $c-snow;
+
+			a {
+				margin-right: 64px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 740px) {
+
+	.career-list {
+		ul {
+
+			li {
+				text-align: center;
+				width: 100%;
+				display: inline-block;
+				
+				a {
+					margin: 0 auto;
+					margin-top: 16px;
+					width: 100%;
+					max-width: 247px;
+				}
+			}
+
+		}
+	}
+}

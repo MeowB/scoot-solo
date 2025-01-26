@@ -1,92 +1,211 @@
 @import '../helpers-css/normalize.css';
 @import '../components/footer.scss';
 @import '../components/small-heading.scss';
+@import '../components/content-row.scss';
+@import '../components/header.scss';
+@import '../components/value-list.scss';
 
-.reverse {
-	transform: rotateZ(180deg);
-	transform: rotateY(180deg);
 
-	article img, p, h2 {
-		transform: rotatey(180deg);
-	}
+html,
+body {
+	overflow-x: hidden;
+	max-width: 100%;
 }
 
-.row {
-	position: relative;
+.faq {
+	text-align: center;
 
-	.aside-circle {
-		position: absolute;
-		right: 0;
-		z-index: -1;
+	h2 {
+		margin-top: 120px;
 	}
 
-	article {
-		display: flex;
-		flex-direction: row-reverse;
-		margin-top: 120px;
+	.row {
+		display: grid;
+		text-align: start;
+		grid-template-columns: 1fr 2fr;
+		margin-top: 64px;
 
-		img {
-			width: 445px;
-			height: 445px;
-			border-radius: 50%;
-		}
 
-		.text-content {
-			margin: 125px 0;
-			padding-right: 220px;
+		.active {
+			text-align: start;
+
+			* {
+				background-color: $c-light-yellow;
+			}
 
 			p {
-				margin-top: 25px;
-				color: $c-dim-grey;
+				display: inline-block !important;
+				transition: all 1s;
+				padding: 0 40px 32px 40px;
 			}
+
+			span {
+				transform: rotate(180deg);
+			}
+		}
+
+		.text-frames {
+			margin-left: 40px;
+		}
+
+		.frame {
+			cursor: pointer;
+			margin-bottom: 16px;
+			background-color: $c-snow;
+
+			h4 {
+				position: relative;
+				padding-left: 40px;
+				z-index: 1;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				span {
+					padding: 32px 40px;
+				}
+
+			}
+
+			p {
+				position: relative;
+				padding-top: 24px;
+				display: none;
+				z-index: 0;
+			}
+		}
+
+		.frame:hover {
+			background-color: $c-light-yellow;
 		}
 	}
 }
 
+// ARROWS
+
+.row1 article .image {
+	position: relative;
+
+	svg {
+		position: absolute;
+		bottom: 40px;
+		left: -125px;
+	}
+
+	hr {
+		position: absolute;
+		height: 15px;
+		background-color: $c-yellow;
+		border: none;
+		width: 5000px;
+		bottom: 41px;
+		right: -5000px;
+		box-shadow: 0 0 1px $c-yellow;
+	}
+}
+
+.row2 article .image {
+	position: relative;
+
+	svg {
+		transform: rotateY(180deg);
+		position: absolute;
+		top: 0;
+		right: -180px;
+	}
+
+	hr {
+		position: absolute;
+		height: 14px;
+		background-color: $c-yellow;
+		border: none;
+		width: 5000px;
+		box-shadow: 0 0 1px $c-yellow;
+		top: 1px;
+		right: -5050px;
+		transform: rotatez(180deg);
+	}
+}
 
 @media screen and (max-width: 1110px) {
-	.row {
-		article {
-			flex-direction: column;
-			align-items: center;
+	.row1 article .image {
+		svg {
+			left: -120px;
+		}
+	}
 
+	.row2 article .image {
 
-			.text-content {
-				margin-top: 50px;
-				padding: 0 100px;
-				text-align: center;
-			}
+		svg {
+			right: 30px;
+		}
+
+		hr {
+			right: -4925px;
 		}
 	}
 }
 
 
-@media screen and (max-width: 550px) {
-	.row {
 
-		.aside-circle{
+@media screen and (max-width: 680px) {
+	
+	.row1 article .image {
+
+		.svg {
+			svg {
+				top: 70px;
+				left: 0px;
+				height: 100%;
+				width: 250%;
+			}
+		}
+
+		hr {
 			display: none;
 		}
+	}
 
-		article {
+	.row2 article .image {
 
-			img {
-				width: 311px;
-				height: 311px;
-			}
-
-			.text-content {
-				margin: 0;
-				padding: 0;
-
-				margin-top: 56px;
-
-				p {
-					margin-top: 32px;
-				}
+		.svg {
+			svg {
+				top: -120px;
+				right: -70px;
+				height: 100%;
+				width: 120%;
 			}
 		}
 
+		hr {
+			display: none;
+		}
 	}
 }
 
+@media screen and (max-width: 700px) {
+	.faq {
+		.row {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+
+			h3 {
+				text-align: center;
+			}
+
+			.text-frames {
+				padding-top: 32px;
+				margin: 0;
+
+				.frame {
+					h4 {
+						span {
+							padding: 30px 15px;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}

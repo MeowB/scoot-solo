@@ -1,0 +1,60 @@
+@import '../helpers-css/variables.scss';
+
+.values-list {
+	margin-top: 120px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+
+	ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 30px;
+		margin-top: 100px;
+
+		.img {
+			position: relative;
+			img {
+				border-radius: 50%;
+			}
+
+			.yellow-circle {
+				position: absolute;
+				bottom: -48px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+
+		.text-content {
+			margin-top: 100px;
+
+			p {
+				margin-top: 30px;
+				color: $c-dim-grey;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.values-list {
+		ul {
+			grid-template-columns: 1fr;
+			p {
+				padding: 0 100px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.values-list{ 
+		ul {
+			p {
+				padding: 0;
+			}
+		}
+	}
+}
