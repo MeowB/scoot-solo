@@ -1,100 +1,88 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/32MK9ogX)
-# SCOOT PROJECT
+# Scoot Solo Project
 
-| Challenge Parameters | Challenge Details                                           |
-|:---------------------|:------------------------------------------------------------|
-| Repository           | `Scoot`                                               |
-| Challenge type       | `Consolidation`                                             |
-| Duration             | `5 days`                                                    |
-| Deployment method    | `GitHub pages`                                              |
-| Group composition    | `Duos`                                                      |
+project live at: [https://scoot-solo.vercel.app/](https://scoot-solo.vercel.app/)
 
-## Learning objectives
+## Overview
 
- - Consolidate your knowledges in GIT, HTML, CSS (SASS), JS.
- - Respect the given design and deliver pixel perfect content.
- - Work in a team.
- - Respect the given deadline.
- - Divide work in smaller parts.
+Scoot Solo is a web application designed to provide a seamless scooter-sharing experience. The project includes various components such as a homepage, about page, locations page, and careers page. The application is built using HTML, CSS, SCSS, and JavaScript.
 
 
- ## Mission
+## Screenshot
 
-It's a beautiful Tuesday morning, you take a sip of your coffee while scrolling through a list of job opportunities. Suddenly, your phone rings, you don't hesitate and pick up, `Hello this is BeCode's bravest ones, how can I help you?` on other side, a piercing deep voice can be heard - `Hello, my name is Jean-Patrick Molard, I've heard that you and your team make professionally and quick websites for clients, I was hoping you could do the same for me.` 
+![scoot-solo.png](./Screenshot.png)
 
-Over the last years, Jean-Patrick has been releasing many designs for websites or applications & he succeed in his business. So much that he opened recently offices in Japan & Indonesia.
-To mark the occasion, he decided to re-design his website & he would like you realize it. 
-He already made the design on Figma that he will share with you. 
-Your goal is to code this site, respecting the designer's mock-up, within a week. 
+## Usage
 
-### The design
+- **Homepage**: Provides an overview of the scooter-sharing service.
+- **About Page**: Details about the company and its mission.
+- **Locations Page**: Information about the locations where the service is available.
+- **Careers Page**: Lists job openings and allows users to apply.
 
-Here you'll find the **[FIGMA FILE](scoot-becode.zip)**
+## Development
 
-Thanks to Figma, you can click and select different elements of the model and have an indication of each of them in the right column.
+### CSS and SCSS
 
+The project uses SCSS for styling. Each page has its own CSS file, such as `about.css`, `careers.css`, and `locations.css`. The main styles are defined in a dedicated `file.scss` file, which imports the other SCSS files. The `helpers-css` directory contains the `normalize.css` file, which resets the default browser styles, and the `variables.scss` file, which defines the color variables and typography used throughout the project.
 
-#### Sizes 
-The different design sizes :
-- Desktop: **1440 px** width
-- Tablet portrait: **768 px** width
-- Mobile: **375 px** width
+### JavaScript
 
-You will have to manage the responsiveness how you think is the best.
+The main JavaScript functionality is handled in `script.js` and `about/script.js`. These scripts manage the interactive elements of the application, such as the hamburger menu and FAQ sections.
 
-**Advice** : Especially for the desktop, check the ["layout grid"](https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-grids-with-grids-columns-and-rows) of Figma to be sure to have the correct center width. 
+## Project Structure
 
-#### Design system
-The first layout in the Figma file is the design style guide. 
-You'll find all the basics informations about typo, colors, buttons effects.. here. 
+The project is organized into the following directories and files:
 
-#### Mobile menu
-On mobile view, you'll notice there is a hamburger menu. The menu sets on the last template. 
+```
+scoot solo/
+├── about/
+│   ├── about.css
+│   ├── about.html
+│   └── script.js
+├── careers/
+│   ├── careers.css
+│   ├── careers.html
+│   └── careers.scss
+├── components/
+│   ├── content-row.scss
+│   ├── header.css
+│   ├── header.scss
+│   ├── small-heading.css
+│   ├── small-heading.scss
+│   └── value-list.scss
+├── helpers-css/
+│   ├── normalize.css
+│   ├── normalize.scss
+│   └── variables.scss
+├── locations/
+│   ├── location.css
+│   ├── location.html
+│   └── location.scss
+├── ressources/
+│   ├── apple-icon.svg
+│   ├── background-circles-desktop.png
+│   ├── background-circles-mobile.png
+│   ├── cross.png
+│   ├── google-icon.png
+│   ├── hamburger.png
+│   ├── heading-circles.png
+│   ├── hero-background.png
+│   ├── image-phone-girl.png
+│   ├── logo-dark.png
+│   ├── logo-light.png
+│   ├── map-desktop.png
+│   ├── map-mobile.png
+│   ├── phone-icon.png
+│   ├── scooter-img.png
+│   └── small-arrow-down.png
+├── index.html
+├── script.js
+├── style.css
+└── style.scss
+```
+## License
 
-#### Effects 
-Jean-Patrick wants you to design some nice hover effects or animations as well. 
-In Figma, he created the layouts with "Active" mention to show you the result of the hovers. 
+This project is licensed under the MIT License.
 
-There is no indication about the effects or animations. For this part, you will have to use your **creativity**.
+## Contact
 
-
-## Instructions
-
-Your mission is to build the front-end integration of the website. 
-
-1. Observe the design carefully, you need to follow it strictly!
-1. The website has to be responsive.
-1. The website has to respond to the [w3c validator](https://validator.w3.org/).
-1. Pay attention to your [SEO](https://moz.com/beginners-guide-to-seo) (The Lighthouse extension can help you).
-1. You must use **Sass**. 
-1. Think about some nice CSS effects/animations.
-1. Make sure the site is **BUG FREE**.
-1. Respect the deadline.
-
-### For JS
-
-1. In tablet and mobile mode, there must be a functional hamburger menu.
-1. Hide the menu when scroll down in the page and display it when scroll up. [Take example on this website](https://wicky.nillia.ms/headroom.js/)
-
-
-### For GitHub
-
-1. Write a good [**README**](https://medium.com/becode/comment-faire-un-readme-sur-github-cc11f3df606a)
-1. Mention a description and the website URL on the top of the repository
-
-
-## Tips and Tricks
-
-1. To help you to set up a naming convention for your classes in CSS we recommend to use the [BEM methodology](https://css-tricks.com/bem-101/).
-1. Make everyday at least one **meeting**, talk about : 
-    - what you did so far
-    - where do you struggle
-    - the objective of the day
-    - plan the next meeting
-1. Pull, push and merge regularly. 
-1. Communicate with your partner when you push on a common branch to the repo. 
-1. Be aware of your time, don't stick to an issue too long, take it in account and fix it at the end.
-
-## Ready?
-
-[![Watch the video](romana.png)](https://youtu.be/-dn7FtPVvoA?t=10)
+For any inquiries or questions, please contact me at my Discord: `.meowsky`
