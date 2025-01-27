@@ -19,6 +19,15 @@ $c-light-yellow: #FFF4DF;
 	letter-spacing: -2.5px;
 	font-weight: 700;
 	color: $c-dark-navy;
+
+
+	@media screen and (max-width: 375px) {
+
+		font-size: 40px;
+		line-height: 40px;
+		letter-spacing: -1.79px;
+
+	}
 }
 
 @mixin heading2 {
@@ -28,6 +37,14 @@ $c-light-yellow: #FFF4DF;
 	letter-spacing: -2.14px;
 	font-weight: 700;
 	color: $c-dark-navy;
+
+	@media screen and (max-width: 375px) {
+
+		font-size: 32px;
+		line-height: 32px;
+		letter-spacing: -1.43px;
+
+	}
 }
 
 @mixin heading3 {
@@ -37,6 +54,14 @@ $c-light-yellow: #FFF4DF;
 	letter-spacing: -1.79px;
 	font-weight: 700;
 	color: $c-dark-navy;
+
+	@media screen and (max-width: 375px) {
+
+		font-size: 32px;
+		line-height: 32px;
+		letter-spacing: -1.43px;
+
+	}
 }
 
 @mixin heading4 {
@@ -46,6 +71,14 @@ $c-light-yellow: #FFF4DF;
 	letter-spacing: -1.07px;
 	font-weight: 700;
 	color: $c-dark-navy;
+
+	@media screen and (max-width: 375px) {
+
+		font-size: 24px;
+		line-height: 24px;
+		letter-spacing: -1.07px;
+
+	}
 }
 
 // default text:

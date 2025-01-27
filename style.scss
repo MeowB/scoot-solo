@@ -2,7 +2,6 @@
 @import './components/footer.scss';
 @import './components/header.scss';
 @import './components/content-row.scss';
-@import './helpers-css/variables.scss';
 
 
 // #region HEADING
@@ -348,7 +347,7 @@
 
 	hr {
 		position: absolute;
-		height: 14px;
+		height: 16px;
 		background-color: $c-yellow;
 		border: none;
 		width: 5000px;
@@ -368,11 +367,11 @@
 
 	hr {
 		position: absolute;
-		height: 14px;
+		height: 16px;
 		background-color: $c-yellow;
 		border: none;
 		width: 5000px;
-		top: 81px;
+		top: 80px;
 		right: -5000px;
 	}
 }

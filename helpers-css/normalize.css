@@ -84,6 +84,13 @@ h1 {
   font-weight: 700;
   color: #495567;
 }
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.79px;
+  }
+}
 
 h2 {
   font-family: "space mono";
@@ -93,6 +100,13 @@ h2 {
   font-weight: 700;
   color: #495567;
 }
+@media screen and (max-width: 375px) {
+  h2 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.43px;
+  }
+}
 
 h3 {
   font-family: "space mono";
@@ -101,6 +115,13 @@ h3 {
   letter-spacing: -1.79px;
   font-weight: 700;
   color: #495567;
+}
+@media screen and (max-width: 375px) {
+  h3 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.43px;
+  }
 }
 
 h4 {

@@ -2,3 +2,66 @@
 @import '../components/footer.scss';
 @import '../components/small-heading.scss';
 @import '../components/header.scss';
+
+
+.location {
+	width: 100%;
+
+	.img {
+		padding-top: 120px;
+		width: 100%;
+	
+		img {
+			width: 100%;
+		}
+	}
+
+	ul{
+		display: none;
+	}
+
+	.text-content {
+		text-align: center;
+		display: grid;
+		grid-template-columns: 2fr 3fr 1fr;
+		gap: 30px;
+		align-items: center;
+		justify-items: center;
+
+		p {
+			color: $c-dim-grey;
+		}
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.location .text-content {
+		grid-template-columns: auto;
+		grid-template-rows: 1fr 1fr 1fr;
+		padding: 0 80px;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.location {
+		ul {
+			display: inline-block;
+			width: 100%;
+			display: grid;
+			text-align: center;
+			gap: 16px;
+
+			li {
+				background-color: $c-light-yellow;
+				padding: 22px 0;
+				width: 100%;
+			}
+		}
+	}
+	
+	.location .img {
+		.map-desktop {
+			display: none;
+		}
+	}
+}
